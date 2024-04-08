@@ -32,10 +32,10 @@ $cov(y,y) = 1/(N-1)\sum{(y_{ik}-\bar{y_i})(y_{jk}-\bar{y_j})}$
 
 Covariance matrix (2x2)
 
-$S = [\begin{smallmatrix}
+$$S = [\begin{smallmatrix}
    cov(x,x) & cov(x,y) \\
    cov(y,x) & cov(y,y)
-\end{smallmatrix}]$
+\end{smallmatrix}]$$
 
 Just keep in mind that we need the covariance values for every pair of the features. 
 
@@ -146,11 +146,7 @@ Mean values of variables: $\bar x_1, \bar x_2,\bar x_3,\bar x_4, ... \bar x_{200
 
 Let’s denote the features : $F = {f_1, f_2, f_3, f_4}$
 
-$cov(x,y) = 1/(N-1)\sum_{
-\begin{subarray}{l}
-   k=1\\
-   0<k\leq N
-\end{subarray}} {(x_{k}-\bar{x})(y_{k}-\bar{y})}$
+$$ \text{cov}(x,y) = \frac{1}{N-1}\sum_{k=1}^{N} (x_{k}-\bar{x})(y_{k}-\bar{y}) $$
 
 where $x,y \in F$
 
@@ -161,7 +157,7 @@ To calculate $det(S-\lambda I) = 0$ we use Leibniz formula
 
 Linear system with 4 unknowns → we will have 4 eigenvalues which we will sort by descending order (the highest corresponds to PC1 etc.)
 
-$(S-\lambda_i I) U_i = 0, i \in {1,4}$ → 4 corresponding eigenvectors
+$$(S-\lambda_i I) U_i = 0, i \in {1,4}$$ → 4 corresponding eigenvectors
 
 $U_i=(u_1, u_2, u_3 ,u_4)$ for i in {1,2,3,4}
 
@@ -200,18 +196,19 @@ $p_{20000,1} = U_1 M_{20000}$
 
 $p_{20000\_2} = U_2 M_{20000}$
 
-$S = \begin{smallmatrix}
+$$S = \begin{smallmatrix}
    cov(f1,f1) & cov(f1,f2) & cov(f1,f3) & cov(f1,f4)\\
-   cov(f2,f1) & cov(f2,f2) & cov(f2,f3) & cov(f2,f4)\\ cov(f3,f1) & cov(f3,f2) & cov(f3,f3) & cov(f3,f4)\\
+   cov(f2,f1) & cov(f2,f2) & cov(f2,f3) & cov(f2,f4)\\ 
+   cov(f3,f1) & cov(f3,f2) & cov(f3,f3) & cov(f3,f4)\\
    cov(f4,f1) & cov(f4,f2) & cov(f4,f3) & cov(f4,f4)
-\end{smallmatrix}$
+\end{smallmatrix}$$
 
 In a PC1-PC2 space
 
-$S = \begin{smallmatrix}
+$$S = \begin{smallmatrix}
    cov(f1,f1) & cov(f1,f2)\\
    cov(f2,f1) & cov(f2,f2)
-\end{smallmatrix}$
+\end{smallmatrix}$$
 
 The variance explained by a PC1 is determined by cov(f1,f1)
 
